@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Tambo Grande</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logotambo.png" alt="Tambo Grande Logo">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca productos" class="search-input">
+            </div>
+            <div class="nav-icons">
+                <a href="#" class="icon">🔔<span>Notificación</span></a>
+                <a href="login.html" class="icon">👤<span>Inicio Sesión</span></a>
+                <a href="carrito.html" class="icon">🛒<span>Carrito</span></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="lacteos.html">LÁCTEOS</a></li>
+                <li><a href="galletas.html">GALLETAS NUTRITIVAS</a></li>
+                <li><a href="cereales.html">CEREALES ANDINOS</a></li>
+                <li><a href="panaderia.html">PANADERÍA</a></li>
+                <li><a href="dulces.html">DULCES NATURALES</a></li>
+                <li><a href="carrito.html">CARRITO 🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido del carrito -->
+    <main>
+        <section class="cart-container">
+            <h2>Carrito de Compras</h2>
+            <div class="cart-items">
+                <!-- Aquí se mostrarán los productos agregados al carrito -->
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="producto1.jpg" alt="Producto 1">
+                    </div>
+                    <div class="item-details">
+                        <h4>Producto Inventado 1</h4>
+                        <p><strong>Precio:</strong> S/. 25.00</p>
+                        <p><strong>Cantidad:</strong> 1</p>
+                        <button class="remove-item">Eliminar</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="producto2.jpg" alt="Producto 2">
+                    </div>
+                    <div class="item-details">
+                        <h4>Producto Inventado 2</h4>
+                        <p><strong>Precio:</strong> S/. 30.00</p>
+                        <p><strong>Cantidad:</strong> 2</p>
+                        <button class="remove-item">Eliminar</button>
+                    </div>
+                </div>
+                <!-- Agrega más productos si es necesario -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: S/. 85.00</h3>
+                <button class="checkout-btn">Proceder a la compra</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-section">
+            <h3>Acerca de Nosotros</h3>
+            <p>Información sobre la empresa.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Servicio al Cliente</h3>
+            <p>Contactos y soporte.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <p>Redes sociales y más.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
