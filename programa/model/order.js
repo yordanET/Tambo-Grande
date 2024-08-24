@@ -7,6 +7,7 @@ class Order {
         this.customer = customer;
     }
 
+    gdndsnnsnsj
     calculateTotal() {
         return this.products.reduce((total, product) => total + product.price, 0);
     }
