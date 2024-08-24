@@ -2,26 +2,117 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambo Grande</title>
+    <title>Tambo Grande - Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Barra de navegación superior -->
     <header>
-        <nav class="navbar">
+        <div class="top-bar">
             <div class="logo">
-                <a href="#">tambo grande</a>
+                <a href="#">
+                    <img src ="logotambo.png">
+                </a>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="search">
+                <input type="text" placeholder="Busca productos" class="search-input">
             </div>
             <div class="nav-icons">
-                <a href="#" class="icon">🔔</a>
-                <a href="#" class="icon">👤</a>
-                <a href="#" class="icon">🛒</a>
+                <a href="#" class="icon">🔔<span>notificación</span></a>
+                <a href="#" class="icon">👤<span>inicio sesión</span></a>
+                <a href="#" class="icon">🛒<span>carrito</span></a>
             </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#">LÁCTEOS</a></li>
+                <li><a href="#">GALLETAS NUTRITIVAS</a></li>
+                <li><a href="#">CEREALES ANDINOS</a></li>
+                <li><a href="#">PANADERÍA</a></li>
+                <li><a href="#">DULCES NATURALES</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Carrusel de productos destacados -->
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="imagenintro.jpg" >
+            </div>
+        </div>
+
+        <!-- Sección de ofertas -->
+        <section class="offers">
+            <h2>ofertas</h2>
+            <div class="products-container">
+                <div class="product">
+                    <div class="product-title">Queso Andino 500g Tambo Grande</div>
+                    <div class="product-image">
+                        <img src="oferta1.jpg" alt="Queso Andino 500g">
+                    </div>
+                    <div class="product-price">s/. 16.00 UND</div>
+                    <div class="product-actions">
+                        <button class="quantity-btn">◄</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="quantity-btn">►</button>
+                        <button class="add-to-cart">agregar</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-title">Queso Mozzarella De 500g Tambo</div>
+                    <div class="product-image">
+                        <img src="oferta2.jpg" alt="Queso Mozzarella 500g">
+                    </div>
+                    <div class="product-price">s/. 16.00 UND</div>
+                    <div class="product-actions">
+                        <button class="quantity-btn">◄</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="quantity-btn">►</button>
+                        <button class="add-to-cart">agregar</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-title">Queso Andino 1kg Tambo Grande</div>
+                    <div class="product-image">
+                        <img src="oferta3.jpg" alt="Queso Andino 1kg">
+                    </div>
+                    <div class="product-price">s/. 16.00 UND</div>
+                    <div class="product-actions">
+                        <button class="quantity-btn">◄</button>
+                        <input type="text" value="1" class="quantity-input">
+                        <button class="quantity-btn">►</button>
+                        <button class="add-to-cart">agregar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-section">
+            <h3>Acerca de Nosotros</h3>
+            <p>Información sobre la empresa.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Servicio al Cliente</h3>
+            <p>Contactos y soporte.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <p>Redes sociales y más.</p>
+        </div>
+    </footer>
+
+    <!-- Ícono de mensaje flotante -->
+    <a href="#" class="message-icon">💬</a>
 </body>
 </html>
+
+
+
+
+
