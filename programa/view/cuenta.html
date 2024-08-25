@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - Tambo Grande</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="#">
+                    <img src="logotambo.png" alt="Logo de Tambo Grande">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca productos" class="search-input" aria-label="Buscar productos">
+            </div>
+            <div class="nav-icons">
+                <a href="notificacion.html" class="icon">🔔<span>Notificación</span></a>
+                <a href="cuenta.html" class="icon">👤<span>Cuenta</span></a>
+                <a href="carrito.html" class="icon">🛒<span>Carrito</span></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="lacteos.html">LÁCTEOS</a></li>
+                <li><a href="galletas.html">GALLETAS NUTRITIVAS</a></li>
+                <li><a href="cereales.html">CEREALES ANDINOS</a></li>
+                <li><a href="panaderia.html">PANADERÍA</a></li>
+                <li><a href="dulces.html">DULCES NATURALES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section class="account-details">
+            <h2>Mi Cuenta</h2>
+            <form id="account-form">
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" value="Juan" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" placeholder="Ingrese su apellido" value="Perez" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="Ingrese su correo electrónico" value="juan.perez@example.com" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" placeholder="Ingrese su teléfono" value="987654321" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" placeholder="Ingrese su DNI" value="12345678" disabled>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingrese su contraseña" disabled>
+                </div>
+                <div class="account-actions">
+                    <button type="button" class="auth-btn" onclick="habilitarEdicion()">Editar Cuenta</button>
+                    <button type="button" class="auth-btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+                    <button type="button" class="auth-btn" onclick="eliminarCuenta()">Eliminar Cuenta</button>
+                </div>
+                <div class="edit-actions" style="display: none;">
+                    <button type="button" class="auth-btn" onclick="guardarCambios()">Guardar</button>
+                    <button type="button" class="auth-btn" onclick="cancelarEdicion()">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-section">
+            <h3>Acerca de Nosotros</h3>
+            <p>Somos una empresa comprometida con la calidad y la tradición.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Servicio al Cliente</h3>
+            <p>Contáctanos para cualquier consulta o soporte.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Síguenos</h3>
+            <p>Estamos en redes sociales para mantenernos conectados contigo.</p>
+        </div>
+    </footer>
+
+    <!-- Ícono de mensaje flotante -->
+    <a href="#" class="message-icon" aria-label="Iniciar chat">💬</a>
+    
+    <!-- Script externo -->
+    <script src="cuenta.js"></script>
+</body>
+</html>
+
+
