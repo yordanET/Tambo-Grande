@@ -64,14 +64,53 @@ function validarFormularioRegistro() {
     }
 
     alert("Formulario de registro enviado correctamente.");
+
+    // Redirige según el rol seleccionado
+    if (rol === 'administrador') {
+        window.location.href = 'admin-inicio.html'; // Redirige a la página de administrador
+    } else {
+        window.location.href = 'cliente-inicio.html'; // Redirige a la página de cliente
+    }
+
     return true; // Aquí puedes agregar la lógica para enviar los datos al servidor.
 }
 
-// Event listener para el cambio de selección del rol
-document.getElementById('rol').addEventListener('change', mostrarCampoCodigo);
+// Función para validar el inicio de sesión
+function validarInicioSesion() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-// Event listener para el botón de registro
-document.querySelector('.auth-btn').addEventListener('click', validarFormularioRegistro);
+    // Aquí puedes agregar la lógica para verificar el nombre de usuario y la contraseña
+    // Por simplicidad, vamos a utilizar valores estáticos
+    const adminUser = "admin";
+    const adminPass = "admin123";
+    const clientUser = "cliente";
+    const clientPass = "cliente123";
+
+    if (username === adminUser && password === adminPass) {
+        // Redirige a la interfaz de administrador
+        alert("Inicio de sesión exitoso como administrador.");
+        window.location.href = 'admin-inicio.html';
+    } else if (username === clientUser && password === clientPass) {
+        // Redirige a la interfaz de cliente
+        alert("Inicio de sesión exitoso como cliente.");
+        window.location.href = 'cliente-inicio.html';
+    } else {
+        // Muestra un mensaje de error
+        alert("Nombre de usuario o contraseña incorrectos.");
+    }
+}
+
+// Event listener para el cambio de selección del rol
+document.getElementById('rol')?.addEventListener('change', mostrarCampoCodigo);
+
+// Event listener para el botón de registro en register.html
+document.querySelector('.auth-btn.register')?.addEventListener('click', validarFormularioRegistro);
+
+// Event listener para el botón de inicio de sesión en login.html
+document.querySelector('.auth-btn.login')?.addEventListener('click', validarInicioSesion);
+
+
 
 
 

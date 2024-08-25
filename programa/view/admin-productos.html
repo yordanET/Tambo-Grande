@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="admin-inicio.html">
+                    <img src="logotambo.png" alt="Logo de Tambo Grande">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca productos" class="search-input" aria-label="Buscar productos">
+            </div>
+            <div class="nav-icons">
+                <a href="notificacion.html" class="icon">🔔<span>Notificación</span></a>
+                <a href="cuenta.html" class="icon">👤<span>Cuenta</span></a>
+                <a href="admin-carrito.html" class="icon">📊<span>Panel</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra lateral de navegación -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="admin-producto.html">productos</a></li>
+            <li><a href="admin-usuario.html">usuarios</a></li>
+            <li><a href="admin-pedido.html">pedidos</a></li>
+            <li><a href="admin-reseña.html">reseña</a></li>
+            <li><a href="admin-envio.html">envio</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h2>Producto</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" id="id">
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio:</label>
+                <input type="text" id="precio">
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion"></textarea>
+            </div>
+            <div class="button-group">
+                <button onclick="guardar()">Guardar</button>
+                <button onclick="editar()">Editar</button>
+            </div>
+        </div>
+
+        <!-- Tabla de productos -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>ID</th>
+                        <th>Precio</th>
+                        <th>Categoría</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de ejemplo -->
+                    <tr>
+                        <td>Producto Ejemplo</td>
+                        <td>123</td>
+                        <td>$20.00</td>
+                        <td>Categoría Ejemplo</td>
+                        <td>Descripción del producto</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

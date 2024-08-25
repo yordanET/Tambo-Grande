@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Envíos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="admin-inicio.html">
+                    <img src="logotambo.png" alt="Logo de Tambo Grande">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca envíos" class="search-input" aria-label="Buscar envíos">
+            </div>
+            <div class="nav-icons">
+                <a href="notificacion.html" class="icon">🔔<span>Notificación</span></a>
+                <a href="cuenta.html" class="icon">👤<span>Cuenta</span></a>
+                <a href="admin-carrito.html" class="icon">📊<span>Panel</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra lateral de navegación -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="admin-productos.html">productos</a></li>
+            <li><a href="admin-usuario.html">usuarios</a></li>
+            <li><a href="admin-pedidos.html">pedidos</a></li>
+            <li><a href="admin-reseña.html">reseña</a></li>
+            <li><a href="admin-envio.html">envio</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h2>Envío</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="pedido-id">ID del pedido:</label>
+                <input type="text" id="pedido-id">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de envío:</label>
+                <input type="date" id="fecha">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                    <option value="enviado">Enviado</option>
+                    <option value="en tránsito">En tránsito</option>
+                    <option value="entregado">Entregado</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button onclick="guardar()">Guardar</button>
+                <button onclick="editar()">Editar</button>
+            </div>
+        </div>
+
+        <!-- Tabla de envíos -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID del Pedido</th>
+                        <th>Dirección</th>
+                        <th>Fecha de Envío</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de ejemplo -->
+                    <tr>
+                        <td>001</td>
+                        <td>Dirección Ejemplo</td>
+                        <td>2024-08-25</td>
+                        <td>Enviado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

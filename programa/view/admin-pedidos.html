@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="admin-inicio.html">
+                    <img src="logotambo.png" alt="Logo de Tambo Grande">
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Busca pedidos" class="search-input" aria-label="Buscar pedidos">
+            </div>
+            <div class="nav-icons">
+                <a href="notificacion.html" class="icon">🔔<span>Notificación</span></a>
+                <a href="cuenta.html" class="icon">👤<span>Cuenta</span></a>
+                <a href="admin-carrito.html" class="icon">📊<span>Panel</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra lateral de navegación -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="admin-producto.html">productos</a></li>
+            <li><a href="admin-usuario.html">usuarios</a></li>
+            <li><a href="admin-pedido.html">pedidos</a></li>
+            <li><a href="admin-reseña.html">reseña</a></li>
+            <li><a href="admin-envio.html">envio</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h2>Pedido</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="id">ID del Pedido:</label>
+                <input type="text" id="id">
+            </div>
+            <div class="form-group">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente">
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <input type="text" id="producto">
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad">
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+            </div>
+            <div class="button-group">
+                <button onclick="guardar()">Guardar</button>
+                <button onclick="editar()">Editar</button>
+            </div>
+        </div>
+
+        <!-- Tabla de pedidos -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID del Pedido</th>
+                        <th>Cliente</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de ejemplo -->
+                    <tr>
+                        <td>001</td>
+                        <td>Cliente Ejemplo</td>
+                        <td>Producto Ejemplo</td>
+                        <td>2</td>
+                        <td>2024-08-25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
